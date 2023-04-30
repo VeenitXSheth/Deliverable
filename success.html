@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,0" />
+    <title>Success | Deliverable</title>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+        
+        html, body {
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main img {
+            height: 128px;
+            width: 128px;
+            margin-bottom: 36px;
+        }
+
+        main h1 {
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 60px;
+        }
+
+        span {
+            cursor: pointer;
+            font-size: 36px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <main>
+        <img src="public/icons/success.jpg" alt="Success!">
+        <h1>Order Successful!</h1>
+        <span class="material-symbols-outlined">chevron_left</span>
+    </main>
+
+    <script>
+
+        const btn = document.querySelector('span');
+        btn.addEventListener('click', function() {
+
+            location.href = 'https://deliverable.veenitxs.repl.co/order';
+            
+        });
+        
+    </script>
+    
+</body>
+</html>

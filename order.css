@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main #order {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main #order nav {
+    height: fit-content;
+    width: 100%;
+    padding: 20px 0px 20px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    z-index: 2;
+    background: white;
+}
+
+main #order nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+main #order nav ul h1 {
+    font-family: 'Roboto', sans-serif;
+    color: red;
+    margin-left: 20px;
+    margin-right: 48px;
+}
+
+main #order nav ul #address-nav {
+    font-family: 'Roboto', sans-serif;
+    margin-right: 2.5px;
+}
+
+main #order nav ul #expand-location {
+    cursor: pointer;
+    padding: 2.5px 2.5px 2.5px;
+    border-radius: 2.5px;
+    margin-right: 25%;
+    transition: 0.3s ease;
+}
+
+main #order nav ul #expand-location:hover {
+    background: #e6e6e6;
+}
+
+main #order nav ul #hidden-location {
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    background: #e6e6e6;
+    padding: 10px 15px 10px;
+    border-radius: 5px;
+    margin-top: 120px;
+    margin-left: 144px;
+    display: none;
+}
+
+main #order nav ul #hidden-location span {
+    color: red;
+    font-size: 24px;
+}
+
+main #order nav ul #hidden-location input {
+    border: none;
+    background: transparent;
+    margin-left: 12px;
+    margin-right: 6px;
+}
+
+main #order nav ul #hidden-location button {
+    background: red;
+    color: white;
+    padding: 5px 5px 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+main #order nav ul #hidden-location button:hover {
+    opacity: 0.75;
+}
+
+main #order nav ul .food-search {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid black;
+    padding: 5px 7.5px 5px;
+    border-radius: 50px;
+    margin-right: 38.5%;
+}
+
+main #order nav ul .food-search span {
+    font-size: 24px;
+}
+
+main #order nav ul .food-search input {
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    background: transparent;
+    margin-right: 5px;
+    margin-left: 10px;
+    width: 8vw;
+}
+
+main #order nav ul .food-search button {
+    background: red;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    padding: 7.5px 7.5px 7.5px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+main #order nav ul .food-search button:hover {
+    opacity: 0.75;
+}
+
+main #order nav ul #account-btn-nav {
+    border: none;
+    background: red;
+    color: white;
+    padding: 10px 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 16px;
+    transition: 0.3s ease;
+}
+
+main #order nav ul #account-btn-nav:hover {
+    opacity: 0.75;
+}
+
+main #order nav ul #cart-btn {
+    border: none;
+    background: red;
+    color: white;
+    padding: 10px 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 8px;
+    transition: 0.3s ease;
+}
+
+main #order nav ul #cart-btn:hover {
+    opacity: 0.75;
+}
+
+main #order .content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 100px 100px;
+}
+
+main #order .content h1 {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 56px;
+    font-size: 48px;
+    margin-bottom: 36px;
+}
+
+main #order .content .featured {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+}
+
+main #order .content h3 {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 18px;
+}
+
+main #order .content .featured .card {
+    background: #f6f6f6;
+    border-radius: 5px;
+    height: fit-content;
+    width: fit-content;
+    margin-right: 24px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+main #order .content .featured .card:hover {
+    opacity: 0.75;
+    box-shadow: 25px 25px 25px rgba(0, 0, 0, 0.1);
+}
+
+main #order .content .featured .card img {
+    height: 256px;
+    width: 256px;
+    border-radius: 5px;
+    margin-bottom: 24px;
+}
+
+main #order .content .featured .card .details {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+main #order .content .featured .card .details p {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 24px;
+    margin-bottom: 6px;
+}
+
+main #order .content .featured .card .details .sbarro {
+    margin-right: 45%;
+}
+
+main #order .content .featured .card .details .chipotle {
+    margin-right: 33.5%;
+}
+
+main #order .content .featured .card .details .pandaexpress {
+    margin-right: 23.5%;
+}
+
+main #order .content .featured .card .details .chickfila {
+    margin-right: 25%;
+}
+
+main #order .content .featured .card .details .shakeshack {
+    margin-right: 18%;
+}
+
+main #order .content .featured .card .details .portillos {
+    margin-right: 27.5%;
+}
+
+
+main #order .content .featured .card .details span {
+    margin-bottom: 6px;
+    font-family: 'Roboto', sans-serif;
+    background: red;
+    color: white;
+    padding: 5px 5px 5px;
+    border-radius: 5px;
+}
+
+main #order .content .filters {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+}
+
+main #order .content .filters .type {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 36px;
+}
+
+main #order .content .filters .type p {
+    margin-right: 12px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+main #order .content .filters .slider {
+    overflow: auto;
+    white-space: nowrap;
+    width: 90%;
+}
+
+main #order .content .filters .slider img {
+    height: 32px;
+    width: 32px;
+    display: inline-block;
+    padding: 16px;
+    margin: 8px;
+    cursor: pointer;
+    border-bottom: none;
+    transition: 0.3s ease;
+}
+
+main #order .content .filters .slider img:hover {
+    opacity: 0.75;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ffffff; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ebebeb;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #e4e4e4; 
+}
+
+.results {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.results #result {
+    display: flex;
+    height: 200px;
+    width: 100%;
+    margin: 32px 0px 32px;
+    transition: 0.3s ease;
+}
+
+.results #result:hover {
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+.results #result img {
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+    margin-right: 24px;
+}
+
+.results #result .details {
+    display: flex;
+    flex-direction: column;
+    margin-right: 60%;
+}
+
+.results #result .details h4 {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 6px;
+    font-size: 24px;
+    margin-top: 16px;
+}
+
+.results #result .details p {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 75px;
+}
+
+.results #result .additional {
+    display: flex;
+    flex-direction: column;
+}
+
+.results #result .additional .time {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 90px;
+    margin-top: 24px;
+}
+
+.results #result .additional .time p {
+    font-weight: 700;
+}
+
+.results #result .additional .time span {
+    font-size: 12px;
+}
+
+.results #result .additional button {
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px 10px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.3s ease;
+}
+
+.results #result .additional button:hover {
+    opacity: 0.75;
+}
+
+.results h1 {
+    display: none;
+    margin: auto;
+}
+
+main #order nav ul #modal {
+    display: none;
+}
+
+main #modal-content {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    z-index: 50;
+    margin-left: 6.25%;
+    margin-top: 20%;
+    height: 80%;
+    width: 75%;
+    box-shadow: 25px 25px 25px rgba(0, 0, 0, 0.1);
+    background: red;
+    color: white;
+    padding: 25px 25px 25px;
+    border-radius: 5px;
+}
+
+main #modal-content label {
+    margin-bottom: 16px;
+}
+
+main #modal-content textarea {
+    border: 1px white solid;
+    border-radius: 5px;
+    background: transparent;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    height: 50%;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+main #modal-content button {
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px 50px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 50%;
+}
+
+main #modal-content span {
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+
+@media (max-width: 400px) {
+
+    main #order nav ul p,span,div,input,#find-btn-nav,#search-btn-nav,#account-btn-nav,#cart-btn,#hidden-location,#expand-location,#address-nav,#s {
+        display: none;
+    }
+
+    main #order nav ul .food-search {
+        border: none;
+        display: none;
+    }
+
+    main #order nav ul #modal {
+        display: flex;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        margin-left: 175px;
+    }
+
+    main #order .content {
+        padding: 50px 36px 25px;
+    }
+
+    main #order .content h1 {
+        font-size: 31px;
+        margin-bottom: 4px;
+    }
+
+    main #order .content h3 {
+        display: none;
+    }
+
+    main #order .content .filters {
+        display: none;
+    }
+
+    main #order .content .results {
+        margin: 0;
+    }
+
+    main #order .content .results #result {
+        margin-bottom: 60px;
+        flex-direction: column;
+    }
+
+    main #order .content .results .asian .additional #pd-btn {
+        margin-bottom: 36px;
+    }
+
+    main #order .content .results #result .details {
+        margin-bottom: 16px;
+    }
+
+    main #order .content .results #result .additional button {
+        width: 81%;
+    }
+
+    main #order .content .results #result img {
+        height: 128px;
+        width: 128px;
+    }
+
+    main #order .content .results #result .details p {
+        margin: 0px;
+    }
+
+    main #order .content .results #result .rating {
+        display: none;
+    }
+
+    main #order .content .results #result .additional .time {
+        display: none;
+    }
+
+    main #order .content .featured {
+        display: none;
+    }
+    
+}

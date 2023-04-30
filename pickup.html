@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,0" />
+    <link href="https://unpkg.com/movement.css/movement.css" rel="stylesheet">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        html, body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            overflow: hidden;
+            
+        }
+
+        #main {
+            height: 100%;
+            width: 100%;
+            display: flex;
+        }
+
+        #main #map {
+            width: 50%;
+            height: 100%;
+            margin: bottom; 16px;
+        }
+
+        #main #controls {
+            height: 100%;
+            width: 50%;
+        }
+
+        #main #controls h1 {
+            font-family: 'Roboto', sans-serif;
+            margin-left: 72px;
+            margin-top: 36px;
+            margin-bottom: 16px;
+        }
+
+        #main #controls p {
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 70%;
+            margin-left: 72px;
+        }
+
+        #main #controls span {
+            margin-left: 72px;
+            cursor: pointer;
+            font-size: 36px;
+        }
+    </style>
+    <title>Pickup | Deliverable</title>
+</head>
+<body>
+
+    <main id="main">
+        <div id="map"></div>
+        <div id="controls">
+            <h1>Pickup</h1>
+            <p>Look at all the great options you have to choose from!</p>
+            <span class="material-symbols-outlined">chevron_left</span>
+        </div>
+    </main>
+
+    <script>
+
+        const btn = document.querySelector('span');
+        btn.addEventListener('click', function() {
+
+            location.href = 'https://deliverable.veenitxs.repl.co/order';
+            
+        });
+        
+        // Pickup Feature Map View Setup
+
+        mapboxgl.accessToken = 'pk.eyJ1IjoidmVlbml0eHNoZXRoIiwiYSI6ImNsaDI1ZGYyeTFhMXczbXBteWpsdTUxOTkifQ.-4nszplG7AwOHTeVIcFBAg';
+        const map = new mapboxgl.Map({
+            container: 'map', // container ID
+            style: 'mapbox://styles/mapbox/streets-v12', // style URL
+            center: [-74.5, 40], // starting position [lng, lat]
+            zoom: 9, // starting zoom
+        });
+        
+    </script>
+    
+</body>
+</html>

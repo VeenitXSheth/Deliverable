@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    background: #ebebeb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main section .wrapper {
+    height: 75%;
+    width: 75%;
+    display: flex;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 25px 25px 25px rgba(0, 0, 0, 0.1);
+}
+
+main section .wrapper .left-order {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+main section .wrapper .left-order h2 {
+    margin-top: 36px;
+    margin-left: 36px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 6px;
+}
+
+main section .wrapper .left-order p {
+    margin-left: 36px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin-bottom: 36px;
+}
+
+main section .wrapper .left-order .edit {
+    margin-left: 36px;
+    margin-bottom: 36px;
+}
+main section .wrapper .left-order .edit label {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 12px;
+}
+
+main section .wrapper .left-order .edit input {
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid black;
+    background: transparent;
+    padding: 10px 200px 10px;
+    border-radius: 5px;
+    margin-top: 12px;
+    transition: 0.3s ease;
+}
+
+main section .wrapper .left-order .edit button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 10px 10px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+main section .wrapper .left-order .details {
+    margin-left: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main section .wrapper .left-order .details label {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 12px;
+}
+
+main section .wrapper .left-order .details input {
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid black;
+    background: transparent;
+    padding: 10px 200px 10px;
+    border-radius: 5px;
+    margin-top: 12px;
+    margin-right: 96px;
+    margin-bottom: 12px;
+    transition: 0.3s ease;
+}
+
+main section .wrapper .left-order .details button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 10px 10px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    margin-right: 96px;
+    transition: 0.3s ease;
+}
+
+main section .wrapper .left-pay {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+main section .wrapper .left-pay h2 {
+    margin-top: 36px;
+    margin-left: 36px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 36px;
+}
+
+main section .wrapper .left-pay form {
+    margin-left: 36px;
+    display: flex;
+    flex-direction: column;
+}
+
+main section .wrapper .left-pay form label {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 6px;
+}
+
+main section .wrapper .left-pay form input {
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid black;
+    background: transparent;
+    padding: 10px 200px 10px;
+    border-radius: 5px;
+    margin-top: 12px;
+    margin-right: 96px;
+    margin-bottom: 30px;
+    transition: 0.3s ease;
+}
+
+main section .wrapper .left-pay form .total {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 36px;
+}
+
+main section .wrapper .left-pay form .total span {
+    margin-right: 64%;
+}
+
+main section .wrapper .left-pay form button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 10px 10px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    margin-right: 96px;
+    transition: 0.3s ease;
+}
+
+main section .wrapper .right {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+main section .wrapper .right img {
+    border-radius: 5px;
+    height: inherit;
+}
+
+@media (max-width: 400px) {
+
+    main section .wrapper .right {
+        display: none;
+    }
+
+    main section .wrapper .left-order .edit .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main section .wrapper .left-order .edit .container input {
+        padding: 10px 25px 10px;
+    }
+
+    main section .wrapper .left-order .edit .container button {
+        padding: 5px 25px 5px;
+    }
+
+    main section .wrapper .left-order .details input {
+        padding: 10px 50px 10px;
+    }
+    
+    main section .wrapper .left-order .details button {
+        padding: 5px 25px 5px;
+    }
+    
+}

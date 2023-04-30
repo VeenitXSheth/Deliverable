@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="checkout.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,0" />
+    <link href="https://unpkg.com/movement.css/movement.css" rel="stylesheet">
+    <title>Checkout | Deliverable</title>
+</head>
+<body>
+
+    <main>
+        <section>
+            <div class="wrapper">
+                <div class="left-order">
+                    <h2>Order details</h2>
+                    <p>Let us know what to get for you</p>
+                    <div class="edit">
+                        <label for="order">Order</label>
+                        <div class="container">
+                            <input required type="text" placeholder="What would you like?" name="order">
+                            <button id="counter-btn">1 +</button>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <label for="order-details">Special Requests</label>
+                        <input required name="order-details" type="text" placeholder="Special requests">
+                        <button id="continue-pay-btn">Continue</button>
+                    </div>
+                </div>
+                <div class="left-pay" style="display: none;">
+                    <h2>Payment details</h2>
+                    <form>
+                        <label for="email">Email address</label>
+                        <input required type="email" placeholder="Email address" name="email">
+                        <label for="card-number">Credit card number</label>
+                        <input required type="number" placeholder="xxxx xxxx xxxx xxxx" name="card-number">
+                        <div class="total">
+                            <span>Total amount</span>
+                            <p id="total"></p>
+                        </div>
+                        <button type="submit">Make payment</button>
+                    </form>
+                </div>
+                <div class="right">
+                    <img id="company-img" src="">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="checkout.js"></script>
+    
+</body>
+</html>
